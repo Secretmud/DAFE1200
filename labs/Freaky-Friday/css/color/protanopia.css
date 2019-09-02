@@ -1,0 +1,29 @@
+html {
+    background: #F1F6FB;
+}
+.head {
+    background: #2F3640;
+}
+.settings {
+    color: white;
+}
+.items {
+    color: orange;
+}
+.about {
+    background: #BBC9DD;
+    box-shadow:gray
+}
+.about > .features {
+    box-shadow: grey;
+}
+.blog {
+    background: #BBC9DD;
+    box-shadow: gray
+}
+.blog > .features {
+    box-shadow:grey;
+}
+.modal {
+    background: orange;
+}
