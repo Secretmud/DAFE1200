@@ -2,10 +2,28 @@ import data from './data.js';
 const cards = document.getElementById("blog");
 const settings = document.getElementById("settings");
 const modal = document.getElementById("modal");
+const modalback = document.getElementById("modalback");
 const close = document.getElementById("close");
+const styles = document.getElementById("style-picker");
+const submit = document.getElementById("accept");
+
+// onload and eventlisteners. 
 window.onload = function() {
     setColor();
 }
+window.addEventListener("load", render);
+settings.addEventListener("click", function() {
+    modal.style.display = "block";
+    modalback.style.display = "block";
+});
+close.addEventListener("click", function() {
+    options_color();
+    modal.style.display = "none";
+    modalback.style.display = "none";
+    window.location.reload(true);
+});
+
+// Some basic functions needed for the site to work as intended
 function render() {
     for (let i = 0; i < Object.keys(data).length; i++) {
         const dataContent = [data[i].id, data[i].img, 
@@ -31,18 +49,8 @@ function render() {
         cards.appendChild(div);
     }
 }
-
-window.addEventListener("load", render);
-settings.addEventListener("click", function() {
-    modal.style.display = "block"
-});
-close.addEventListener("click", function() {
-    modal.style.display = "none"
-});
-
-
-document.getElementById("style-picker").addEventListener("click", function(){
-    var selected = this.options[this.selectedIndex].value;
+function options_color(){
+    var selected = styles.value;
     var color = localStorage.setItem("scheme", JSON.stringify(selected));
     var datarecived = localStorage.getItem('scheme');
     switch(color) {
@@ -62,7 +70,7 @@ document.getElementById("style-picker").addEventListener("click", function(){
             setStyleSource ("color", "normal");
             break;
     }   
-});
+}
 function setStyleSource (linkID, sourceLoc) {
     var theLink = document.getElementById(linkID);
     theLink.href = sourceLoc;
@@ -71,15 +79,14 @@ function setStyleSource (linkID, sourceLoc) {
 function setColor() {
     var datarecived = localStorage.getItem('scheme');
     var color_blind = localStorage.getItem('color-mode');
-    if (!color_blind) {
+    if (!color_blind) { //Opening the modal on first setup. Starting in greyscale mode
         modal.style.display = "block";
         color_blind = localStorage.setItem("color-mode", true);
     }
     if(!datarecived) {
-        setStyleSource ("color", "css/colorscheme/dark.css");
-        console.log("State1:", JSON.parse(color));
+        setStyleSource ("color", "css/color/normal.css");
     } else {
         setStyleSource("color", JSON.parse(datarecived));
-        console.log("State2:", JSON.parse(datarecived));
     }
 }
+
