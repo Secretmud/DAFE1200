@@ -1,0 +1,23 @@
+Welcome to our prototype!
+Below, you'll find the slideshow for our prototype and thought around how the app wil work. The prototype is designed to fit both hearing and deaf people.
+The idea behind the desing and functionality of the app, is that it can be used by adult and children.
+Each slideshow shows the functionality of all the buttons on the app and is therefor divided into four slideshows. If the user want to navigate back to the home screen, he/she can click on the back button which is on every screen
+
+Short about the app:
+By going through the pictures below, we'll nagvigate you throug the app's functionality.
+The user will come across a home screen with three buttons:
+1) Translate
+2) Connect device
+3) Support
+
+Picture 1: 
+On the main page, the user will come across this image. The user will have three choices to choose from. The user will here click on the "Translate" button.
+
+Picture 2: 
+Now, we are back to the main page, and the user will have three choices to chose between. The user will here click on the "Translate" button. 
+
+Picture 3: 
+Here will the user click on the "Connect to device" button. Here you can use Bluetooth or local WiFi networks to connect.
+
+Picture 4: 
+Here the user can press the "Support" button for information about the app. Here you can read about us and be able to contact us.

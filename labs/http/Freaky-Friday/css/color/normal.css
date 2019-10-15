@@ -1,0 +1,50 @@
+html {
+    background: #F1F6FB;
+}
+.head {
+    background: #2F3640;
+}
+.settings {
+    color: white;
+}
+.items {
+    color: orange;
+}
+.about {
+    color: white;
+    background: repeating-linear-gradient(
+        -45deg,
+        #606dbc,
+        #606dbc 10px,
+        #0f0298 10px,
+        #0f0298 20px
+        );
+    box-shadow: 0px 0px 15px grey;
+}
+.about > .features {
+    box-shadow: 0px 0px 15px grey;
+    background: gray;
+}
+.blog {
+    color: white;
+    box-shadow: 0px 0px 15px grey;
+    background: repeating-linear-gradient(
+        -45deg,
+        #606dbc,
+        #606dbc 10px,
+        #0f0298 10px,
+        #0f0298 20px
+        );
+}
+.blog > .features {
+    box-shadow: 0px 0px 15px grey;
+    background: gray;
+}
+.modalback {
+    background: grey;
+}
+.modal {
+}
+.wrapper-modal {
+    background: darkgray;
+}
